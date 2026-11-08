@@ -1,0 +1,801 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nails by Belladonna | Manicure, BIAB &amp; Gellak in Culemborg</title>
+<meta name="description" content="Nails by Belladonna in Culemborg: verzorgde, elegante nagels. Basis manicure, French manicure, BIAB en gellak. Alleen op afspraak – maak eenvoudig een afspraak via WhatsApp.">
+<meta name="keywords" content="nagelsalon Culemborg, manicure Culemborg, BIAB Culemborg, gellak, gel nagels, French manicure">
+<meta property="og:title" content="Nails by Belladonna | Manicure, BIAB & Gellak in Culemborg">
+<meta property="og:description" content="Verzorgde, elegante nagels in Culemborg. Alleen op afspraak.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#F4EEE3">
+<link rel="icon" type="image/png" href="img/logo-icon.png">
+<link rel="apple-touch-icon" href="img/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NailSalon",
+  "name": "Nails by Belladonna",
+  "telephone": "+31615463503",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Heinsiusstraat 41",
+    "postalCode": "4105 DE",
+    "addressLocality": "Culemborg",
+    "addressCountry": "NL"
+  },
+  "url": "https://wa.me/31615463503"
+}
+</script>
+
+<style>
+:root{
+  --cream:#F4EEE3;
+  --beige:#EDE3D3;
+  --gold:#C5A572;
+  --gold-dark:#A8874F;
+  --brush:#DCC7AE;
+  --coral:#F08C8C;
+  --text:#1C1A17;
+  --text-2:#5A5248;
+  --serif:"Cormorant Garamond","Playfair Display",Georgia,serif;
+  --sans:"Montserrat","Poppins",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --radius:4px;
+  --shadow:0 10px 30px -12px rgba(90,70,40,.25);
+  --header-h:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 8px)}
+body{
+  margin:0;
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.7;
+  color:var(--text);
+  background-color:var(--cream);
+  /* lichte papiertextuur */
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .38 0 0 0 0 .28 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.15;margin:0}
+p{margin:0 0 1em}
+.container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--text);color:var(--cream);padding:8px 14px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--gold-dark);outline-offset:3px}
+
+/* ---------- Knoppen ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6em;
+  font-family:var(--sans);font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;padding:.95em 1.7em;border-radius:999px;border:1px solid var(--gold-dark);
+  background:var(--gold);color:var(--text);cursor:pointer;
+  transition:background .3s,color .3s,transform .3s,box-shadow .3s;
+}
+.btn:hover{background:var(--gold-dark);color:#fff;transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn--outline{background:transparent}
+.btn--outline:hover{background:var(--text);border-color:var(--text);color:var(--cream)}
+.btn--lg{font-size:.9rem;padding:1.15em 2.2em}
+
+/* ---------- Header ---------- */
+.header{
+  position:fixed;inset:0 0 auto;z-index:50;height:var(--header-h);
+  background:rgba(244,238,227,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(197,165,114,.45);
+}
+.header .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .logo{width:46px;height:46px;flex:none}
+.brand span{font-family:var(--serif);font-weight:700;font-size:1.05rem;letter-spacing:.14em;line-height:1.1;text-transform:uppercase}
+.nav{display:none}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
+.nav a{text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;position:relative;padding:4px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold-dark);transform:scaleX(0);transition:transform .3s}
+.nav a:hover::after{transform:scaleX(1)}
+.header .btn{display:none;padding:.75em 1.3em;font-size:.72rem}
+.menu-toggle{
+  width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;background:transparent;cursor:pointer;
+  display:grid;place-items:center;color:var(--text);
+}
+.menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{display:block;width:18px;height:1.5px;background:currentColor;position:relative;transition:transform .3s,background .3s}
+.menu-toggle span::before,.menu-toggle span::after{content:"";position:absolute;left:0}
+.menu-toggle span::before{top:-6px}.menu-toggle span::after{top:6px}
+.menu-open .menu-toggle span{background:transparent}
+.menu-open .menu-toggle span::before{transform:translateY(6px) rotate(45deg)}
+.menu-open .menu-toggle span::after{transform:translateY(-6px) rotate(-45deg)}
+.menu-open .nav{
+  display:block;position:fixed;top:var(--header-h);left:0;right:0;background:var(--cream);
+  border-bottom:1px solid var(--gold);padding:24px 16px 32px;box-shadow:var(--shadow);
+}
+.menu-open .nav ul{flex-direction:column;align-items:center;gap:18px}
+.menu-open .nav a{font-size:.95rem}
+.nav .nav-cta{margin-top:8px}
+@media (min-width:960px){
+  .menu-toggle{display:none}
+  .nav{display:block}
+  .nav .nav-cta{display:none}
+  .header .btn{display:inline-flex}
+  .brand span{font-size:1.15rem}
+}
+
+/* ---------- Gouden kader & secties ---------- */
+section{padding:72px 0}
+.frame{position:relative;border:1px solid var(--gold);padding:48px 20px;background:rgba(244,238,227,.5)}
+.frame::before{content:"";position:absolute;inset:6px;border:1px solid rgba(197,165,114,.45);pointer-events:none}
+@media (min-width:768px){section{padding:96px 0}.frame{padding:64px 48px}}
+.alt{background:var(--beige)}
+.section-head{text-align:center;margin-bottom:40px}
+.eyebrow{display:block;font-size:.72rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--text-2);margin-bottom:10px}
+.section-head h2{font-size:clamp(1.9rem,5vw,2.8rem)}
+.section-head p{max-width:560px;margin:14px auto 0;color:var(--text-2)}
+
+/* Verdeler met takje */
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px auto 0;max-width:320px;color:var(--gold)}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{transform:scaleX(-1)}
+.divider svg{width:64px;height:22px;flex:none}
+
+/* Penseelstreek achter titels */
+.brush{
+  display:inline-block;position:relative;padding:.35em 1.1em;z-index:0;
+}
+.brush::before{
+  content:"";position:absolute;inset:0 -4px;z-index:-1;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 60' preserveAspectRatio='none'%3E%3Cpath fill='%23DCC7AE' d='M6 14c30-9 70-6 108-8 44-2 96-4 140 0 18 2 34 3 42 8 4 6 0 11 2 17-1 7 2 12-4 17-24 6-58 5-94 6-50 1-102 3-150 0-16-1-36-1-46-6-5-6 0-11-2-17 0-6-4-12 4-17z'/%3E%3Cpath fill='%23DCC7AE' opacity='.55' d='M2 26c40-4 90 2 140-2s110-2 156 1l-2 6c-50 1-100 3-150 1S40 30 4 33z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+}
+
+/* ---------- Hero ---------- */
+.hero{padding-top:calc(var(--header-h) + 32px);padding-bottom:56px}
+.hero .frame{display:grid;gap:40px;align-items:center;text-align:center}
+.hero h1{font-size:clamp(2.4rem,9vw,4.4rem);letter-spacing:.06em}
+.hero .sub{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.25rem,3.6vw,1.6rem);text-transform:none;letter-spacing:.01em;color:var(--text-2);margin-top:14px}
+.hero p.lead{max-width:460px;margin:22px auto 30px;color:var(--text-2)}
+.hero .note{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-2)}
+.hero .note::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral)}
+.hero-visual{position:relative;max-width:360px;margin:0 auto;width:100%}
+.hero-visual .ring{position:absolute;inset:-14px;border:1px solid var(--gold);border-radius:50%}
+.hero-visual .ring2{position:absolute;inset:-26px;border:1px dashed rgba(197,165,114,.5);border-radius:50%}
+.hero-visual .circle{border-radius:50%;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:1}
+.hero-logo{width:150px;height:150px;margin:0 auto 22px;border-radius:50%;filter:drop-shadow(0 8px 18px rgba(120,90,40,.28))}
+img.logo{border-radius:50%;object-fit:cover}
+@media (min-width:880px){
+  .hero{padding-top:calc(var(--header-h) + 48px)}
+  .hero .frame{grid-template-columns:1.15fr 1fr;text-align:left;gap:56px}
+  .hero p.lead{margin-left:0}
+  .hero .note{justify-content:flex-start}
+  .hero-logo{margin-left:0}
+  .hero .divider{margin-left:0}
+}
+
+/* ---------- Behandelingen ---------- */
+.services{display:grid;gap:24px;max-width:560px;margin:0 auto}
+@media (min-width:920px){.services{grid-template-columns:repeat(3,1fr);max-width:none}}
+.card{
+  background:var(--cream);border:1px solid rgba(197,165,114,.6);border-radius:var(--radius);
+  padding:36px 24px 28px;text-align:center;position:relative;transition:transform .4s,box-shadow .4s;
+}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card h3{font-size:1.45rem;margin-bottom:20px}
+.price-list{list-style:none;margin:0;padding:0;text-align:left}
+.price-list li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px dashed rgba(168,135,79,.4);font-size:.93rem}
+.price-list li:last-child{border-bottom:0}
+.price-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--coral);flex:none;transform:translateY(-2px)}
+.price-list .name{flex:1}
+.price-list .price{font-family:var(--sans);font-weight:600;font-size:.95rem;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap;color:var(--text)}
+.services-note{text-align:center;margin-top:36px;color:var(--text-2);font-size:.9rem}
+
+/* ---------- Galerij ---------- */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (min-width:720px){.gallery{grid-template-columns:repeat(3,1fr);gap:18px}}
+@media (min-width:1000px){.gallery{grid-template-columns:repeat(4,1fr)}}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:1;border:1px solid rgba(197,165,114,.5);background:var(--cream)}
+.gallery figure > svg,.gallery figure > img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
+.gallery figcaption{
+  position:absolute;inset:auto 0 0;padding:28px 12px 12px;text-align:center;
+  font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cream);
+  background:linear-gradient(transparent,rgba(28,26,23,.72));opacity:0;transform:translateY(8px);transition:opacity .5s,transform .5s;
+}
+.gallery figure:hover > svg,.gallery figure:hover > img{transform:scale(1.07);filter:saturate(1.08)}
+.gallery figure:hover figcaption,.gallery figure:focus-within figcaption{opacity:1;transform:none}
+@media (hover:none){.gallery figcaption{opacity:1;transform:none}}
+
+/* ---------- De salon ---------- */
+.salon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (min-width:760px){.salon-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+.salon-grid figure{margin:0;position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:3/4;border:1px solid var(--gold);background:var(--beige)}
+.salon-grid figure::before{content:"";position:absolute;inset:6px;border:1px solid rgba(244,238,227,.75);z-index:1;pointer-events:none}
+.salon-grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.salon-grid figure:hover img{transform:scale(1.05)}
+.salon-grid figcaption{position:absolute;inset:auto 0 0;padding:28px 10px 14px;text-align:center;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(28,26,23,.7))}
+.hero-visual .circle img,.about .portrait .circle img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- Over mij ---------- */
+.about{display:grid;gap:40px;align-items:center}
+.about .portrait{max-width:300px;margin:0 auto;width:100%;position:relative}
+.about .portrait .circle{border-radius:50%;overflow:hidden;aspect-ratio:1;box-shadow:var(--shadow)}
+.about .portrait::after{content:"";position:absolute;inset:-12px;border:1px solid var(--gold);border-radius:50%}
+.about blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.3rem,3.4vw,1.7rem);font-weight:500;line-height:1.5;color:var(--text)}
+.about .sign{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--text-2)}
+.about .text{text-align:center}
+@media (min-width:820px){.about{grid-template-columns:1fr 1.4fr;gap:64px}.about .text{text-align:left}.about .divider{margin-left:0}}
+
+/* ---------- Hoe werkt het ---------- */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:36px;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr);gap:28px}}
+.steps li{text-align:center;position:relative;counter-increment:s}
+.steps .icon{width:88px;height:88px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;position:relative;background:var(--cream)}
+.steps .icon svg{width:38px;height:38px;color:var(--gold-dark)}
+.steps .icon::after{
+  content:counter(s);position:absolute;top:-4px;right:-4px;width:28px;height:28px;border-radius:50%;
+  background:var(--gold);color:var(--text);font-family:var(--serif);font-weight:700;font-size:1rem;display:grid;place-items:center;
+}
+.steps h3{font-size:1.15rem;letter-spacing:.06em;max-width:240px;margin:0 auto}
+@media (min-width:760px){
+  .steps li:not(:last-child)::before{content:"";position:absolute;top:44px;left:calc(50% + 60px);right:calc(-50% + 60px);height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+}
+
+/* ---------- Afspraakformulier ---------- */
+
+.booking{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field-row{display:grid;gap:18px}
+@media (min-width:600px){.field-row{grid-template-columns:1fr 1fr}}
+.field label{font-size:.74rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-2)}
+.field label span{color:#B4545A}
+.field label .opt{color:var(--text-2);font-weight:500;letter-spacing:.05em;text-transform:none}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;font-size:1rem;color:var(--text);background:var(--cream);
+  border:1px solid var(--gold);border-radius:var(--radius);padding:.8em 1em;min-height:50px;
+  transition:border-color .3s,box-shadow .3s;-webkit-appearance:none;appearance:none;
+}
+.field select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A8874F' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 1em center;background-size:12px;padding-right:2.6em;
+}
+.field textarea{resize:vertical;min-height:96px}
+.field input::placeholder,.field textarea::placeholder{color:#8C8274}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold-dark);box-shadow:0 0 0 3px rgba(197,165,114,.3)}
+.field.invalid input,.field.invalid select{border-color:#B4545A}
+.error{margin:0;font-size:.82rem;color:#A3424A;min-height:0}
+.error:empty{display:none}
+.booking .btn{align-self:center;margin-top:8px}
+.form-note{text-align:center;font-size:.85rem;color:var(--text-2);margin:0}
+
+/* ---------- Contact ---------- */
+.contact{display:grid;gap:32px}
+@media (min-width:860px){.contact{grid-template-columns:1fr 1.25fr;gap:48px;align-items:stretch}}
+.contact-info{display:flex;flex-direction:column;gap:22px}
+.info-row{display:flex;gap:16px;align-items:flex-start}
+.info-row .ic{width:46px;height:46px;flex:none;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold-dark)}
+.info-row .ic svg{width:20px;height:20px}
+.info-row strong{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-2);font-weight:600}
+.info-row a,.info-row span{font-size:1.02rem;text-decoration:none}
+.info-row a:hover{text-decoration:underline;text-decoration-color:var(--gold)}
+.badge{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:.5em 1.1em;border:1px solid var(--gold);border-radius:999px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral)}
+.map{border:1px solid var(--gold);padding:6px;background:var(--cream);min-height:320px;display:flex}
+.map iframe{border:0;width:100%;min-height:306px;flex:1;filter:sepia(.25) saturate(.85)}
+.contact-cta{text-align:center;margin-top:40px}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--text);color:var(--beige);padding:56px 0 100px;text-align:center}
+.footer .logo{width:64px;height:64px;margin:0 auto 14px}
+.footer .name{font-family:var(--serif);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:1.2rem;color:var(--cream)}
+.footer ul{list-style:none;padding:0;margin:22px 0;display:flex;flex-direction:column;gap:8px;font-size:.92rem}
+.footer a{text-decoration:none;color:var(--beige)}
+.footer a:hover{color:var(--gold)}
+.footer .social{display:inline-flex;align-items:center;gap:8px}
+.footer .social svg{width:18px;height:18px}
+.footer .copy{font-size:.78rem;letter-spacing:.12em;color:#B8AD9C;border-top:1px solid rgba(197,165,114,.3);padding-top:20px;margin-top:10px}
+@media (min-width:720px){.footer ul{flex-direction:row;justify-content:center;gap:32px}}
+
+/* ---------- Zwevende WhatsApp-knop ---------- */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;z-index:60;width:60px;height:60px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);
+  transition:transform .3s;border:3px solid var(--cream);
+}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px}
+.wa-float::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid #25D366;animation:pulse 2.4s infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.5);opacity:0}}
+
+/* ---------- Fade-in ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}.reveal.d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .wa-float::after{animation:none}
+  *{transition-duration:.01ms!important}
+}
+.no-js .reveal{opacity:1;transform:none}
+[data-art] svg,[data-art] img{width:100%;height:100%;object-fit:cover}
+</style>
+</head>
+<body class="no-js">
+
+<!-- Herbruikbare SVG-symbolen -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="60" cy="60" r="51" fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"/>
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <!-- haar -->
+        <path d="M44 34c6-10 24-13 34-4 9 8 9 20 6 30 -2 8 0 16 6 22 -6 2 -12 0 -15-5"/>
+        <path d="M44 34c-6 8 -7 20 -4 30 2 7 0 14 -6 19 6 2 11 0 14-4"/>
+        <path d="M52 30c-4 6 -6 13 -5 20"/>
+        <!-- gezicht -->
+        <path d="M49 50c0 14 4 26 11 30 7-4 11-16 11-30"/>
+        <!-- gesloten ogen -->
+        <path d="M51 55c2 2 5 2 7 0"/>
+        <path d="M62 55c2 2 5 2 7 0"/>
+        <path d="M51 51c2-1 5-1 7 0" opacity=".6"/>
+        <path d="M62 51c2-1 5-1 7 0" opacity=".6"/>
+        <!-- neus & lippen -->
+        <path d="M60 57v8l-2 1"/>
+        <path d="M55 70c2 1 3 0 5 1 2-1 3 0 5-1 -2 3 -8 3 -10 0z"/>
+        <!-- hals & hand -->
+        <path d="M55 80v9M65 80v9"/>
+        <path d="M46 96c4-4 10-6 14-6s10 2 14 6"/>
+      </g>
+    </symbol>
+    <symbol id="sprig" viewBox="0 0 64 22">
+      <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+        <path d="M4 11h56"/>
+        <path d="M14 11c2-5 6-7 10-6-2 4-6 6-10 6z" fill="currentColor" fill-opacity=".35"/>
+        <path d="M22 11c2 5 6 7 10 6-2-4-6-6-10-6z" fill="currentColor" fill-opacity=".35"/>
+        <path d="M32 11c2-5 6-7 10-6-2 4-6 6-10 6z" fill="currentColor" fill-opacity=".35"/>
+        <path d="M40 11c2 5 6 7 10 6-2-4-6-6-10-6z" fill="currentColor" fill-opacity=".35"/>
+        <circle cx="54" cy="11" r="1.6" fill="currentColor"/>
+      </g>
+    </symbol>
+    <symbol id="wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.43 9.43 0 0 1-4.8-1.32l-.35-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.24-9.44 9.45-9.44 2.52 0 4.89.99 6.67 2.77a9.37 9.37 0 0 1 2.76 6.68c0 5.21-4.24 9.44-9.44 9.44zm8.04-17.48A11.3 11.3 0 0 0 12.05.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.6 23.6l6.01-1.58a11.33 11.33 0 0 0 5.43 1.38h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.32-8.03z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Naar de inhoud</a>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="top">
+  <div class="container">
+    <a class="brand" href="#home" aria-label="Nails by Belladonna – naar home">
+      <img class="logo" src="img/logo-icon.png" width="96" height="96" alt="" aria-hidden="true">
+      <span>Nails by<br>Belladonna</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#behandelingen">Behandelingen</a></li>
+        <li><a href="#galerij">Galerij</a></li>
+        <li><a href="#over-mij">Over mij</a></li>
+        <li><a href="#salon">Salon</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta"><a class="btn" href="#afspraak">Afspraak maken</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#afspraak">
+      <svg aria-hidden="true"><use href="#wa"/></svg>Afspraak maken
+    </a>
+    <button class="menu-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="frame">
+      <div class="reveal">
+        <img class="hero-logo" src="img/logo.png" width="320" height="320" alt="Logo van Nails by Belladonna: gouden lijntekening van een vrouwengezicht met verzorgde nagels">
+        <h1>Nails by Belladonna</h1>
+        <p class="sub">Verzorgde, elegante nagels in Culemborg</p>
+        <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+        <p class="lead">Ontspan en laat je verwennen. Professionele nagelverzorging met aandacht voor detail.</p>
+        <a class="btn btn--lg wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#wa"/></svg>Maak een afspraak via WhatsApp
+        </a>
+        <p class="note">Alleen op afspraak · <a href="#afspraak">of vul het formulier in</a></p>
+      </div>
+      <div class="hero-visual reveal d2">
+        <div class="ring2" aria-hidden="true"></div>
+        <div class="ring" aria-hidden="true"></div>
+        <div class="circle"><img src="img/salon-overzicht.jpg" width="480" height="640" alt="De lichte salon van Nails by Belladonna met daklicht, nageltafel en kleurenwand" style="object-position:50% 45%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEHANDELINGEN ============ -->
+<section id="behandelingen" class="alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Wat ik voor je doe</span>
+      <h2>Behandelingen</h2>
+      <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+    </div>
+
+    <div class="services">
+      <article class="card reveal">
+        <h3><span class="brush">Basis manicure</span></h3>
+        <ul class="price-list">
+          <li><span class="name">Basis manicure</span><span class="price">€ 25,00</span></li>
+          <li><span class="name">French manicure / design / simple</span><span class="price">€ 30,00</span></li>
+        </ul>
+      </article>
+
+      <article class="card reveal d1">
+        <h3><span class="brush">BIAB</span></h3>
+        <ul class="price-list">
+          <li><span class="name">BIAB op natuurlijke nagel</span><span class="price">€ 30,00</span></li>
+          <li><span class="name">BIAB met gellak</span><span class="price">€ 35,00</span></li>
+        </ul>
+      </article>
+
+      <article class="card reveal d2">
+        <h3><span class="brush">Gellak</span></h3>
+        <ul class="price-list">
+          <li><span class="name">Gel nails</span><span class="price">€ 30,00</span></li>
+          <li><span class="name">Nagels verwijderen</span><span class="price">€ 10,00</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="services-note reveal">Vragen over een behandeling? Stuur gerust een berichtje via WhatsApp.</p>
+  </div>
+</section>
+
+<!-- ============ GALERIJ ============ -->
+<section id="galerij">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Mijn werk</span>
+      <h2>Galerij</h2>
+      <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+      <p>Een greep uit mijn werk – van zacht nude roze tot klassiek rood en sprankelende glitter.</p>
+    </div>
+    <!-- Vervang de illustraties door echte foto's: <figure><img src="fotos/1.jpg" alt="..." loading="lazy"><figcaption>...</figcaption></figure> -->
+    <div class="gallery">
+      <figure class="reveal" tabindex="0"><div data-art="nude" data-alt="Nagels in nude roze met glanzende afwerking" data-square></div><figcaption>Nude roze</figcaption></figure>
+      <figure class="reveal d1" tabindex="0"><div data-art="red" data-alt="Klassieke rode gellak" data-square></div><figcaption>Klassiek rood</figcaption></figure>
+      <figure class="reveal d2" tabindex="0"><div data-art="glitter" data-alt="Nagels met gouden glitter" data-square></div><figcaption>Gouden glitter</figcaption></figure>
+      <figure class="reveal d3" tabindex="0"><div data-art="french" data-alt="French manicure met witte tips" data-square></div><figcaption>French manicure</figcaption></figure>
+      <figure class="reveal" tabindex="0"><div data-art="biab" data-alt="BIAB op natuurlijke nagel" data-square></div><figcaption>BIAB naturel</figcaption></figure>
+      <figure class="reveal d1" tabindex="0"><div data-art="rosegl" data-alt="Roze nagels met fijne glitter" data-square></div><figcaption>Roze glitter</figcaption></figure>
+      <figure class="reveal d2" tabindex="0"><div data-art="wine" data-alt="Donkerrode bordeaux nagels" data-square></div><figcaption>Bordeaux</figcaption></figure>
+      <figure class="reveal d3" tabindex="0"><div data-art="coral" data-alt="Nagels in koraalroze tint" data-square></div><figcaption>Koraal</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OVER MIJ ============ -->
+<section id="over-mij" class="alt">
+  <div class="container">
+    <div class="frame">
+      <div class="about">
+        <div class="portrait reveal">
+          <div class="circle"><img src="img/over-mij.jpg" width="480" height="640" loading="lazy" alt="De nagelstyliste van Nails by Belladonna, glimlachend in de wachthoek van de salon" style="object-position:55% 18%"></div>
+        </div>
+        <div class="text reveal d1">
+          <span class="eyebrow">Maak kennis</span>
+          <h2 style="font-size:clamp(1.9rem,5vw,2.6rem)">Over mij</h2>
+          <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+          <blockquote style="margin-top:24px">
+            Bij Nails by Belladonna staat jouw comfort centraal. Ik werk met kwaliteitsproducten en neem de tijd voor elke klant, zodat je met een glimlach en prachtige nagels naar huis gaat.
+          </blockquote>
+          <p class="sign">— Belladonna</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DE SALON ============ -->
+<section id="salon">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Welkom</span>
+      <h2>De salon</h2>
+      <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+      <p>Een lichte, rustige plek in Culemborg waar je even helemaal tot rust komt – met een kopje koffie of thee erbij.</p>
+    </div>
+    <div class="salon-grid">
+      <figure class="reveal"><img src="img/salon-nageltafel.jpg" width="480" height="640" loading="lazy" alt="Nageltafel met lamp, uv-lampen en een wand vol nagellak"><figcaption>De nageltafel</figcaption></figure>
+      <figure class="reveal d1"><img src="img/salon-daklicht.jpg" width="480" height="640" loading="lazy" alt="Behandelruimte met groot daklicht en uitzicht op het groen"><figcaption>Veel daglicht</figcaption></figure>
+      <figure class="reveal d2"><img src="img/salon-werkplek.jpg" width="480" height="640" loading="lazy" alt="Werkplek met comfortabele stoel, nageltafel en keukentje"><figcaption>Jouw plek</figcaption></figure>
+      <figure class="reveal"><img src="img/salon-balie.jpg" width="480" height="640" loading="lazy" alt="Ontvangstbalie met orchidee en een rek met nagelproducten"><figcaption>Ontvangst</figcaption></figure>
+      <figure class="reveal d1"><img src="img/salon-wachthoek.jpg" width="480" height="640" loading="lazy" alt="Gezellige wachthoek met stoel, bijzettafel en droogbloemen"><figcaption>Wachthoek</figcaption></figure>
+      <figure class="reveal d2"><img src="img/salon-koffie.jpg" width="480" height="640" loading="lazy" alt="Koffie- en theehoek met koffiemachine, waterkoker en lekkers"><figcaption>Koffie &amp; thee</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOE WERKT HET ============ -->
+<section id="hoe-werkt-het" class="alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">In drie stappen</span>
+      <h2>Hoe werkt het?</h2>
+      <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+    </div>
+    <ol class="steps">
+      <li class="reveal">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01" stroke-width="2"/></svg>
+        </div>
+        <h3>Stuur een berichtje via WhatsApp</h3>
+      </li>
+      <li class="reveal d1">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M9 14.5l2 2 4-4"/></svg>
+        </div>
+        <h3>Kies je behandeling en tijd</h3>
+      </li>
+      <li class="reveal d2">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18.5 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8zM5.5 15.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z"/></svg>
+        </div>
+        <h3>Geniet van je nieuwe nagels</h3>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ AFSPRAAK FORMULIER ============ -->
+<section id="afspraak">
+  <div class="container">
+    <div class="frame booking-frame">
+      <div class="section-head reveal">
+        <span class="eyebrow">Snel &amp; eenvoudig</span>
+        <h2>Afspraak aanvragen</h2>
+        <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+        <p>Vul je wensen in en verstuur je aanvraag direct via WhatsApp. Ik bevestig je afspraak zo snel mogelijk.</p>
+      </div>
+      <form class="booking reveal" id="booking-form" novalidate>
+        <div class="field">
+          <label for="f-naam">Naam <span aria-hidden="true">*</span></label>
+          <input id="f-naam" name="naam" type="text" autocomplete="given-name" required placeholder="Je naam">
+          <p class="error" id="e-naam" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="f-behandeling">Behandeling <span aria-hidden="true">*</span></label>
+          <select id="f-behandeling" name="behandeling" required>
+            <option value="">Kies een behandeling</option>
+            <optgroup label="Basis manicure">
+              <option value="Basis manicure">Basis manicure – € 25,00</option>
+              <option value="French manicure / design / simple">French manicure / design / simple – € 30,00</option>
+            </optgroup>
+            <optgroup label="BIAB">
+              <option value="BIAB op natuurlijke nagel">BIAB op natuurlijke nagel – € 30,00</option>
+              <option value="BIAB met gellak">BIAB met gellak – € 35,00</option>
+            </optgroup>
+            <optgroup label="Gellak">
+              <option value="Gel nails">Gel nails – € 30,00</option>
+              <option value="Nagels verwijderen">Nagels verwijderen – € 10,00</option>
+            </optgroup>
+            <option>Weet ik nog niet – graag advies</option>
+          </select>
+          <p class="error" id="e-behandeling" role="alert"></p>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-datum">Gewenste datum <span aria-hidden="true">*</span></label>
+            <input id="f-datum" name="datum" type="date" required>
+            <p class="error" id="e-datum" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="f-tijd">Voorkeur tijdstip</label>
+            <select id="f-tijd" name="tijd">
+              <option>Maakt niet uit</option>
+              <option>Ochtend (9:00 – 12:00)</option>
+              <option>Middag (12:00 – 17:00)</option>
+              <option>Avond (na 17:00)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-opmerking">Opmerking <span class="opt">(optioneel)</span></label>
+          <textarea id="f-opmerking" name="opmerking" rows="3" placeholder="Bijvoorbeeld een kleur, design of andere wens"></textarea>
+        </div>
+        <button class="btn btn--lg" type="submit">
+          <svg aria-hidden="true"><use href="#wa"/></svg>Verstuur via WhatsApp
+        </button>
+        <p class="form-note">Je wordt doorgestuurd naar WhatsApp met een kant-en-klaar bericht. Je afspraak is definitief na mijn bevestiging.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="alt">
+  <div class="container">
+    <div class="frame">
+      <div class="section-head reveal">
+        <span class="eyebrow">Tot snel</span>
+        <h2>Contact</h2>
+        <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
+      </div>
+      <div class="contact">
+        <div class="contact-info reveal">
+          <div class="info-row">
+            <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+            <div><strong>Adres</strong><a href="https://www.google.com/maps/search/?api=1&query=Heinsiusstraat+41+4105+DE+Culemborg" target="_blank" rel="noopener">Heinsiusstraat 41<br>4105 DE Culemborg</a></div>
+          </div>
+          <div class="info-row">
+            <div class="ic" aria-hidden="true"><svg><use href="#wa"/></svg></div>
+            <div><strong>WhatsApp</strong><a class="wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener">06 15463503</a></div>
+          </div>
+          <div class="info-row">
+            <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
+            <div><strong>Openingstijden</strong><span>Alleen op afspraak</span></div>
+          </div>
+          <span class="badge">Alleen op afspraak</span>
+        </div>
+        <div class="map reveal d1">
+          <iframe title="Kaart: Nails by Belladonna, Heinsiusstraat 41, 4105 DE Culemborg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Heinsiusstraat%2041%2C%204105%20DE%20Culemborg&z=16&output=embed"></iframe>
+        </div>
+      </div>
+      <div class="contact-cta reveal">
+        <a class="btn btn--lg wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#wa"/></svg>Stuur een WhatsApp-bericht
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <img class="logo" src="img/logo-icon.png" width="96" height="96" alt="" aria-hidden="true">
+    <div class="name">Nails by Belladonna</div>
+    <ul>
+      <li>Heinsiusstraat 41, 4105 DE Culemborg</li>
+      <li><a class="wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener">WhatsApp: 06 15463503</a></li>
+      <li><a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram van Nails by Belladonna">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a></li>
+    </ul>
+    <p class="copy">© 2026 Nails by Belladonna · Alleen op afspraak</p>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener" aria-label="Stuur een WhatsApp-bericht">
+  <svg aria-hidden="true"><use href="#wa"/></svg>
+</a>
+
+<script>
+(function(){
+  document.body.classList.remove('no-js');
+
+  /* WhatsApp-links met vooraf ingevuld bericht */
+  var msg = encodeURIComponent('Hallo! Ik wil graag een afspraak maken bij Nails by Belladonna.');
+  document.querySelectorAll('.wa-link').forEach(function(a){ a.href = 'https://wa.me/31615463503?text=' + msg; });
+
+  /* Mobiel menu */
+  var toggle = document.querySelector('.menu-toggle');
+  toggle.addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+  });
+  document.querySelectorAll('.nav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.body.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* Nagel-illustraties (tijdelijk, tot er echte foto's zijn) */
+  var palettes = {
+    nude:   {bg:'#EBD9CC', polish:'#E3B5A8', shine:'#F6DCD3'},
+    french: {bg:'#EDE3D3', polish:'#F2D9CF', shine:'#FBEDE7', tip:'#FFFDF8'},
+    biab:   {bg:'#E9DCCB', polish:'#E8BFB4', shine:'#F7E0D8'},
+    red:    {bg:'#E7D6C6', polish:'#B3202E', shine:'#E2525C'},
+    wine:   {bg:'#E3D4C3', polish:'#6E1424', shine:'#A23446'},
+    coral:  {bg:'#EFE1D3', polish:'#F08C8C', shine:'#F8B9B4'},
+    glitter:{bg:'#EADBC8', polish:'#D9B57A', shine:'#F3DDB0', glitter:'#FFF4D6'},
+    rosegl: {bg:'#EEDDD3', polish:'#E4A9A9', shine:'#F5CFCB', glitter:'#FFFFFF'}
+  };
+  var uid = 0;
+  function rand(seed){ return function(){ seed = (seed*9301+49297)%233280; return seed/233280; }; }
+  function art(key, label){
+    var p = palettes[key] || palettes.nude, id = 'n' + (uid++), r = rand(uid*7+3);
+    var fingers = [[38,92,24],[70,62,27],[102,52,28],[134,62,27],[164,98,23]];
+    var s = '<svg viewBox="0 0 200 200" role="img" aria-label="'+label+'" preserveAspectRatio="xMidYMid slice"><title>'+label+'</title>';
+    s += '<defs><radialGradient id="'+id+'g" cx="50%" cy="30%" r="80%"><stop offset="0" stop-color="#FBF6EE"/><stop offset="1" stop-color="'+p.bg+'"/></radialGradient>';
+    s += '<linearGradient id="'+id+'s" x1="0" x2="1"><stop offset="0" stop-color="#F1D4BF"/><stop offset=".5" stop-color="#F6DFCD"/><stop offset="1" stop-color="#E7C2A9"/></linearGradient></defs>';
+    s += '<rect width="200" height="200" fill="url(#'+id+'g)"/>';
+    s += '<circle cx="160" cy="40" r="46" fill="#fff" opacity=".25"/>';
+    fingers.forEach(function(f, i){
+      var x = f[0], y = f[1], w = f[2], nw = w - 8, nh = w * 1.15, nx = x - nw/2, ny = y + 5, cid = id + 'c' + i;
+      s += '<rect x="'+(x-w/2)+'" y="'+y+'" width="'+w+'" height="'+(215-y)+'" rx="'+(w/2)+'" fill="url(#'+id+'s)"/>';
+      s += '<clipPath id="'+cid+'"><rect x="'+nx+'" y="'+ny+'" width="'+nw+'" height="'+nh+'" rx="'+(nw/2)+'"/></clipPath>';
+      s += '<g clip-path="url(#'+cid+')"><rect x="'+nx+'" y="'+ny+'" width="'+nw+'" height="'+nh+'" fill="'+p.polish+'"/>';
+      if (p.tip) s += '<path d="M'+nx+' '+(ny+nh*.32)+'Q'+x+' '+(ny+nh*.5)+' '+(nx+nw)+' '+(ny+nh*.32)+'V'+ny+'H'+nx+'z" fill="'+p.tip+'"/>';
+      if (p.glitter) for (var k=0;k<14;k++) s += '<circle cx="'+(nx+r()*nw).toFixed(1)+'" cy="'+(ny+r()*nh).toFixed(1)+'" r="'+(.5+r()*1.3).toFixed(2)+'" fill="'+p.glitter+'" opacity="'+(.5+r()*.5).toFixed(2)+'"/>';
+      s += '<rect x="'+(nx+nw*.22)+'" y="'+(ny+3)+'" width="'+(nw*.18)+'" height="'+(nh*.55)+'" rx="2" fill="'+p.shine+'" opacity=".7"/></g>';
+      s += '<rect x="'+nx+'" y="'+ny+'" width="'+nw+'" height="'+nh+'" rx="'+(nw/2)+'" fill="none" stroke="#000" stroke-opacity=".06"/>';
+    });
+    if (p.glitter) for (var j=0;j<18;j++) s += '<circle cx="'+(r()*200).toFixed(1)+'" cy="'+(r()*60).toFixed(1)+'" r="'+(.6+r()*1.4).toFixed(2)+'" fill="#C5A572" opacity="'+(.3+r()*.5).toFixed(2)+'"/>';
+    return s + '</svg>';
+  }
+  document.querySelectorAll('[data-art]').forEach(function(el){
+    var svg = art(el.dataset.art, el.dataset.alt || 'Nagels van Nails by Belladonna');
+    if (el.hasAttribute('data-square')) { el.outerHTML = svg; } else { el.innerHTML = svg; }
+  });
+
+  /* Afspraakformulier → WhatsApp */
+  var form = document.getElementById('booking-form');
+  var datum = document.getElementById('f-datum');
+  var today = new Date(); today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  datum.min = today.toISOString().slice(0, 10);
+
+  function setError(name, text){
+    var input = form.elements[name], err = document.getElementById('e-' + name);
+    err.textContent = text || '';
+    input.closest('.field').classList.toggle('invalid', !!text);
+    input.setAttribute('aria-invalid', text ? 'true' : 'false');
+    if (text) input.setAttribute('aria-describedby', 'e-' + name); else input.removeAttribute('aria-describedby');
+  }
+  ['naam','behandeling','datum'].forEach(function(n){
+    form.elements[n].addEventListener('input', function(){ setError(n, ''); });
+    form.elements[n].addEventListener('change', function(){ setError(n, ''); });
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = form.elements, first = null;
+    var naam = f.naam.value.trim(), beh = f.behandeling.value, d = f.datum.value;
+    if (!naam) { setError('naam', 'Vul je naam in.'); first = first || f.naam; }
+    if (!beh) { setError('behandeling', 'Kies een behandeling.'); first = first || f.behandeling; }
+    if (!d) { setError('datum', 'Kies een datum.'); first = first || f.datum; }
+    else if (d < datum.min) { setError('datum', 'Kies een datum vanaf vandaag.'); first = first || f.datum; }
+    if (first) { first.focus(); return; }
+
+    var datumTekst = new Date(d + 'T12:00:00').toLocaleDateString('nl-NL', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+    var lines = [
+      'Hallo! Ik wil graag een afspraak maken bij Nails by Belladonna.',
+      '',
+      '*Naam:* ' + naam,
+      '*Behandeling:* ' + beh,
+      '*Gewenste datum:* ' + datumTekst,
+      '*Voorkeur tijdstip:* ' + f.tijd.value
+    ];
+    var opm = f.opmerking.value.trim();
+    if (opm) lines.push('*Opmerking:* ' + opm);
+    lines.push('', 'Alvast bedankt!');
+    var url = 'https://wa.me/31615463503?text=' + encodeURIComponent(lines.join('\n'));
+    var win = window.open(url, '_blank', 'noopener');
+    if (!win) window.location.href = url;
+  });
+
+  /* Fade-in bij scrollen */
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  } else {
+    items.forEach(function(el){ el.classList.add('visible'); });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Originele foto's (het site gebruikt de geoptimaliseerde versies in img/)
+IMG_*.jpeg
+PHOTO-*.jpg
+.claude/
+Thumbs.db
+desktop.ini
