@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lettertype kiezen</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Cinzel:wght@400;500&family=Bellefair&family=Tenor+Sans&family=Marcellus&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F4EEE3;--beige:#EDE3D3;--gold:#C5A572;--brush:#DCC7AE;--coral:#F08C8C;--text:#3A2C23;--heading:#3E2A1F;--text-2:#5C4A3D}
+*{box-sizing:border-box}
+body{margin:0;background:var(--beige);color:var(--text);font-family:Lato,Arial,sans-serif;font-size:17px;line-height:1.7}
+header{text-align:center;padding:40px 16px 8px}
+header h1{font-family:Lato;font-size:1.1rem;letter-spacing:.2em;text-transform:uppercase;margin:0}
+header p{margin:6px 0 0;color:var(--text-2)}
+.grid{display:grid;gap:24px;max-width:1200px;margin:24px auto 60px;padding:0 16px}
+@media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+.opt{background:var(--cream);border:1px solid var(--gold);padding:36px 28px;position:relative;text-align:center}
+.opt::before{content:"";position:absolute;inset:6px;border:1px solid rgba(197,165,114,.45);pointer-events:none}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);padding:.3em 1em;border-radius:99px}
+.fname{margin:8px 0 22px;color:var(--text-2);font-size:.9rem}
+.opt img{width:76px;height:76px;border-radius:50%;margin:0 auto 14px;display:block}
+.big{font-size:2.3rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.15;color:var(--heading);margin:0}
+.sub{font-size:1.3rem;color:var(--text-2);margin:10px 0 22px}
+.sec{display:inline-block;font-size:1.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--heading);background:var(--brush);padding:.2em .9em;margin-bottom:14px}
+.price{display:flex;justify-content:space-between;max-width:340px;margin:0 auto;border-bottom:1px dashed rgba(168,135,79,.4);padding:6px 0;font-size:.95rem;text-align:left}
+.price b{font-weight:700}
+.quote{font-size:1.25rem;line-height:1.5;color:var(--heading);margin:22px auto 0;max-width:460px}
+.f1 .big,.f1 .sub,.f1 .sec,.f1 .quote{font-family:"Gilda Display",serif}
+.f2 .big,.f2 .sec{font-family:Cinzel,serif;font-weight:500}
+.f2 .sub,.f2 .quote{font-family:Lato,sans-serif}
+.f3 .big,.f3 .sub,.f3 .sec,.f3 .quote{font-family:Bellefair,serif}
+.f4 .big,.f4 .sub,.f4 .sec,.f4 .quote{font-family:"Tenor Sans",sans-serif}
+.f5 .big,.f5 .sub,.f5 .sec,.f5 .quote{font-family:Marcellus,serif}
+</style>
+</head>
+<body>
+<header>
+  <h1>Kies een lettertype</h1>
+  <p>Kleuren blijven hetzelfde – alleen het lettertype van de titels verandert. Tekst blijft Lato.</p>
+</header>
+<div class="grid">
+  <section class="opt f1"><span class="tag">Optie 1 · nu op de site</span><p class="fname">Gilda Display – klassiek & verfijnd</p>
+    <img src="img/logo-icon.png" alt=""><h2 class="big">Nails by Belladonna</h2><p class="sub">Verzorgde, elegante nagels in Culemborg</p>
+    <div class="sec">Behandelingen</div><div class="price"><span>BIAB met gellak</span><b>€ 35,00</b></div><div class="price"><span>Basis manicure</span><b>€ 25,00</b></div>
+    <p class="quote">Bij Nails by Belladonna staat jouw comfort centraal.</p></section>
+  <section class="opt f2"><span class="tag">Optie 2</span><p class="fname">Cinzel – luxe hoofdletters, zoals bij juweliers</p>
+    <img src="img/logo-icon.png" alt=""><h2 class="big">Nails by Belladonna</h2><p class="sub">Verzorgde, elegante nagels in Culemborg</p>
+    <div class="sec">Behandelingen</div><div class="price"><span>BIAB met gellak</span><b>€ 35,00</b></div><div class="price"><span>Basis manicure</span><b>€ 25,00</b></div>
+    <p class="quote">Bij Nails by Belladonna staat jouw comfort centraal.</p></section>
+  <section class="opt f3"><span class="tag">Optie 3</span><p class="fname">Bellefair – romantisch & elegant</p>
+    <img src="img/logo-icon.png" alt=""><h2 class="big">Nails by Belladonna</h2><p class="sub">Verzorgde, elegante nagels in Culemborg</p>
+    <div class="sec">Behandelingen</div><div class="price"><span>BIAB met gellak</span><b>€ 35,00</b></div><div class="price"><span>Basis manicure</span><b>€ 25,00</b></div>
+    <p class="quote">Bij Nails by Belladonna staat jouw comfort centraal.</p></section>
+  <section class="opt f4"><span class="tag">Optie 4</span><p class="fname">Tenor Sans – modern, clean & chic</p>
+    <img src="img/logo-icon.png" alt=""><h2 class="big">Nails by Belladonna</h2><p class="sub">Verzorgde, elegante nagels in Culemborg</p>
+    <div class="sec">Behandelingen</div><div class="price"><span>BIAB met gellak</span><b>€ 35,00</b></div><div class="price"><span>Basis manicure</span><b>€ 25,00</b></div>
+    <p class="quote">Bij Nails by Belladonna staat jouw comfort centraal.</p></section>
+  <section class="opt f5"><span class="tag">Optie 5 · vorige versie</span><p class="fname">Marcellus – clean & rustig</p>
+    <img src="img/logo-icon.png" alt=""><h2 class="big">Nails by Belladonna</h2><p class="sub">Verzorgde, elegante nagels in Culemborg</p>
+    <div class="sec">Behandelingen</div><div class="price"><span>BIAB met gellak</span><b>€ 35,00</b></div><div class="price"><span>Basis manicure</span><b>€ 25,00</b></div>
+    <p class="quote">Bij Nails by Belladonna staat jouw comfort centraal.</p></section>
+</div>
+</body>
+</html>
