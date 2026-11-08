@@ -97,11 +97,11 @@ p{margin:0 0 1em}
 .brand .logo{width:46px;height:46px;flex:none}
 .brand span{font-family:var(--serif);font-weight:700;font-size:1.05rem;letter-spacing:.14em;line-height:1.1;text-transform:uppercase}
 .nav{display:none}
-.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
-.nav a{text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;position:relative;padding:4px 0}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:24px}
+.nav a{text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;position:relative;padding:4px 0;white-space:nowrap}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--gold-dark);transform:scaleX(0);transition:transform .3s}
 .nav a:hover::after{transform:scaleX(1)}
-.header .btn{display:none;padding:.75em 1.3em;font-size:.72rem}
+.header .btn{display:none;padding:.75em 1.3em;font-size:.72rem;white-space:nowrap}
 .menu-toggle{
   width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;background:transparent;cursor:pointer;
   display:grid;place-items:center;color:var(--text);
@@ -119,7 +119,7 @@ p{margin:0 0 1em}
 .menu-open .nav ul{flex-direction:column;align-items:center;gap:18px}
 .menu-open .nav a{font-size:.95rem}
 .nav .nav-cta{margin-top:8px}
-@media (min-width:960px){
+@media (min-width:1100px){
   .menu-toggle{display:none}
   .nav{display:block}
   .nav .nav-cta{display:none}
@@ -194,10 +194,10 @@ img.logo{border-radius:50%;object-fit:cover}
 .services-note{text-align:center;margin-top:36px;color:var(--text-2);font-size:.9rem}
 
 /* ---------- Galerij ---------- */
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-@media (min-width:720px){.gallery{grid-template-columns:repeat(3,1fr);gap:18px}}
-@media (min-width:1000px){.gallery{grid-template-columns:repeat(4,1fr)}}
-.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:1;border:1px solid rgba(197,165,114,.5);background:var(--cream)}
+.gallery{display:grid;grid-template-columns:1fr;gap:16px;max-width:420px;margin:0 auto}
+@media (min-width:640px){.gallery{grid-template-columns:repeat(3,1fr);gap:18px;max-width:none}}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:3/4;border:1px solid var(--gold);background:var(--beige)}
+.gallery figure::before{content:"";position:absolute;inset:6px;border:1px solid rgba(244,238,227,.75);z-index:1;pointer-events:none}
 .gallery figure > svg,.gallery figure > img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
 .gallery figcaption{
   position:absolute;inset:auto 0 0;padding:28px 12px 12px;text-align:center;
@@ -465,18 +465,12 @@ img.logo{border-radius:50%;object-fit:cover}
       <span class="eyebrow">Mijn werk</span>
       <h2>Galerij</h2>
       <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
-      <p>Een greep uit mijn werk – van zacht nude roze tot klassiek rood en sprankelende glitter.</p>
+      <p>Een greep uit mijn werk – van zacht blushroze met glitter tot diep marineblauw.</p>
     </div>
-    <!-- Vervang de illustraties door echte foto's: <figure><img src="fotos/1.jpg" alt="..." loading="lazy"><figcaption>...</figcaption></figure> -->
     <div class="gallery">
-      <figure class="reveal" tabindex="0"><div data-art="nude" data-alt="Nagels in nude roze met glanzende afwerking" data-square></div><figcaption>Nude roze</figcaption></figure>
-      <figure class="reveal d1" tabindex="0"><div data-art="red" data-alt="Klassieke rode gellak" data-square></div><figcaption>Klassiek rood</figcaption></figure>
-      <figure class="reveal d2" tabindex="0"><div data-art="glitter" data-alt="Nagels met gouden glitter" data-square></div><figcaption>Gouden glitter</figcaption></figure>
-      <figure class="reveal d3" tabindex="0"><div data-art="french" data-alt="French manicure met witte tips" data-square></div><figcaption>French manicure</figcaption></figure>
-      <figure class="reveal" tabindex="0"><div data-art="biab" data-alt="BIAB op natuurlijke nagel" data-square></div><figcaption>BIAB naturel</figcaption></figure>
-      <figure class="reveal d1" tabindex="0"><div data-art="rosegl" data-alt="Roze nagels met fijne glitter" data-square></div><figcaption>Roze glitter</figcaption></figure>
-      <figure class="reveal d2" tabindex="0"><div data-art="wine" data-alt="Donkerrode bordeaux nagels" data-square></div><figcaption>Bordeaux</figcaption></figure>
-      <figure class="reveal d3" tabindex="0"><div data-art="coral" data-alt="Nagels in koraalroze tint" data-square></div><figcaption>Koraal</figcaption></figure>
+      <figure class="reveal" tabindex="0"><img src="img/galerij-blushroze-glitter.jpg" width="800" height="1067" loading="lazy" alt="Glanzende blushroze manicure met fijne glitter op amandelvormige nagels"><figcaption>Blushroze glitter</figcaption></figure>
+      <figure class="reveal d1" tabindex="0"><img src="img/galerij-marineblauw.jpg" width="800" height="1067" loading="lazy" alt="Glanzende marineblauwe gellak op korte, ronde nagels"><figcaption>Marineblauw</figcaption></figure>
+      <figure class="reveal d2" tabindex="0"><img src="img/galerij-nude-glitter.jpg" width="800" height="875" loading="lazy" alt="Nude roze nagels met subtiele glitter en een glanzende afwerking"><figcaption>Nude glitter</figcaption></figure>
     </div>
   </div>
 </section>
