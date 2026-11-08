@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="img/logo-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -43,10 +43,12 @@
   --brush:#DCC7AE;
   --coral:#F08C8C;
   --text:#3A2C23;
-  --heading:#3E2A1F;
+  --heading:#7A4B27;
+  --bronze-1:#6B4122;
+  --bronze-2:#9C6B3D;
   --espresso:#3B2E26;
   --text-2:#5C4A3D;
-  --serif:"Gilda Display","Didot",Georgia,serif;
+  --serif:"Cormorant Garamond","Cormorant",Garamond,Georgia,serif;
   --sans:"Lato","Helvetica Neue",Arial,system-ui,sans-serif;
   --radius:4px;
   --shadow:0 10px 30px -12px rgba(90,70,40,.25);
@@ -67,7 +69,7 @@ body{
 }
 img,svg{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--heading);letter-spacing:.08em;text-transform:uppercase;line-height:1.15;margin:0}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--heading);letter-spacing:.01em;text-transform:none;line-height:1.05;margin:0}
 p{margin:0 0 1em}
 .container{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
 .skip{position:absolute;left:-999px;top:8px;background:var(--text);color:var(--cream);padding:8px 14px;z-index:100}
@@ -97,7 +99,7 @@ p{margin:0 0 1em}
 .header .container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand .logo{width:46px;height:46px;flex:none}
-.brand span{font-family:var(--serif);font-weight:400;color:var(--heading);font-size:1.05rem;letter-spacing:.14em;line-height:1.1;text-transform:uppercase}
+.brand span{font-family:var(--serif);font-weight:600;color:var(--heading);font-size:1.3rem;letter-spacing:.02em;line-height:1.05;text-transform:none}
 .nav{display:none}
 .nav ul{list-style:none;margin:0;padding:0;display:flex;gap:24px}
 .nav a{text-decoration:none;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;position:relative;padding:4px 0;white-space:nowrap}
@@ -137,7 +139,7 @@ section{padding:72px 0}
 .alt{background:var(--beige)}
 .section-head{text-align:center;margin-bottom:40px}
 .eyebrow{display:block;font-size:.78rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--text-2);margin-bottom:10px}
-.section-head h2{font-size:clamp(1.9rem,5vw,2.8rem)}
+.section-head h2{font-size:clamp(2.6rem,7vw,3.8rem)}
 .section-head p{max-width:560px;margin:14px auto 0;color:var(--text-2)}
 
 /* Verdeler met takje */
@@ -158,8 +160,10 @@ section{padding:72px 0}
 /* ---------- Hero ---------- */
 .hero{padding-top:calc(var(--header-h) + 32px);padding-bottom:56px}
 .hero .frame{display:grid;gap:40px;align-items:center;text-align:center}
-.hero h1{font-size:clamp(2.4rem,9vw,4.4rem);letter-spacing:.06em}
-.hero .sub{font-family:var(--serif);font-style:normal;font-weight:400;font-size:clamp(1.15rem,3.2vw,1.45rem);text-transform:none;letter-spacing:.04em;color:var(--text-2);margin-top:14px}
+.hero h1{font-size:clamp(3.6rem,13vw,6.4rem);letter-spacing:0;line-height:.95;background:linear-gradient(180deg,var(--bronze-2),var(--bronze-1));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-bottom:.08em}
+.hero h1 .h1-small{display:block;font-size:.5em;line-height:1.1}
+.hero .rule{width:180px;height:1px;background:var(--heading);opacity:.6;margin:22px auto 0}
+.hero .sub{font-family:var(--serif);font-style:normal;font-weight:500;font-size:clamp(1.25rem,3.4vw,1.55rem);text-transform:none;letter-spacing:.07em;color:var(--heading);margin-top:16px}
 .hero p.lead{max-width:460px;margin:22px auto 30px;color:var(--text-2)}
 .hero .note{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 8px;line-height:1.6;margin-top:18px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-2)}
 .hero .note::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral)}
@@ -176,6 +180,7 @@ img.logo{border-radius:50%;object-fit:cover}
   .hero .note{justify-content:flex-start}
   .hero-logo{margin-left:0}
   .hero .divider{margin-left:0}
+  .hero .rule{margin-left:0}
 }
 
 /* ---------- Behandelingen ---------- */
@@ -186,7 +191,7 @@ img.logo{border-radius:50%;object-fit:cover}
   padding:36px 24px 28px;text-align:center;position:relative;transition:transform .4s,box-shadow .4s;
 }
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.card h3{font-size:1.45rem;margin-bottom:20px}
+.card h3{font-size:1.9rem;margin-bottom:20px}
 .price-list{list-style:none;margin:0;padding:0;text-align:left}
 .price-list li{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px dashed rgba(168,135,79,.4);font-size:.93rem}
 .price-list li:last-child{border-bottom:0}
@@ -240,7 +245,7 @@ img.logo{border-radius:50%;object-fit:cover}
   content:counter(s);position:absolute;top:-4px;right:-4px;width:28px;height:28px;border-radius:50%;
   background:var(--gold);color:var(--text);font-family:var(--serif);font-weight:400;font-size:1rem;display:grid;place-items:center;
 }
-.steps h3{font-size:1.15rem;letter-spacing:.06em;max-width:240px;margin:0 auto}
+.steps h3{font-size:1.5rem;letter-spacing:.01em;max-width:260px;margin:0 auto}
 @media (min-width:760px){
   .steps li:not(:last-child)::before{content:"";position:absolute;top:44px;left:calc(50% + 60px);right:calc(-50% + 60px);height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
 }
@@ -291,7 +296,7 @@ img.logo{border-radius:50%;object-fit:cover}
 /* ---------- Footer ---------- */
 .footer{background:var(--espresso);color:var(--beige);padding:56px 0 100px;text-align:center}
 .footer .logo{width:64px;height:64px;margin:0 auto 14px}
-.footer .name{font-family:var(--serif);font-weight:400;letter-spacing:.18em;text-transform:uppercase;font-size:1.2rem;color:var(--cream)}
+.footer .name{font-family:var(--serif);font-weight:500;letter-spacing:.02em;text-transform:none;font-size:1.8rem;color:var(--cream)}
 .footer ul{list-style:none;padding:0;margin:22px 0;display:flex;flex-direction:column;gap:8px;font-size:.92rem}
 .footer a{text-decoration:none;color:var(--beige)}
 .footer a:hover{color:var(--gold)}
@@ -404,9 +409,9 @@ img.logo{border-radius:50%;object-fit:cover}
     <div class="frame">
       <div class="reveal">
         <img class="hero-logo" src="img/logo.png" width="320" height="320" alt="Logo van Nails by Belladonna: gouden lijntekening van een vrouwengezicht met verzorgde nagels">
-        <h1>Nails by Belladonna</h1>
+        <h1><span class="h1-small">Nails by</span>Belladonna</h1>
+        <div class="rule" aria-hidden="true"></div>
         <p class="sub">Verzorgde, elegante nagels in Culemborg</p>
-        <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
         <p class="lead">Ontspan en laat je verwennen. Professionele nagelverzorging met aandacht voor detail.</p>
         <a class="btn btn--lg wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener">
           <svg aria-hidden="true"><use href="#wa"/></svg>Maak een afspraak via WhatsApp
@@ -490,7 +495,7 @@ img.logo{border-radius:50%;object-fit:cover}
         </div>
         <div class="text reveal d1">
           <span class="eyebrow">Maak kennis</span>
-          <h2 style="font-size:clamp(1.9rem,5vw,2.6rem)">Over mij</h2>
+          <h2 style="font-size:clamp(2.6rem,7vw,3.6rem)">Over mij</h2>
           <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
           <blockquote style="margin-top:24px">
             Bij Nails by Belladonna staat jouw comfort centraal. Ik werk met kwaliteitsproducten en neem de tijd voor elke klant, zodat je met een glimlach en prachtige nagels naar huis gaat.
