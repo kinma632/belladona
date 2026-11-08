@@ -4,3 +4,5 @@ PHOTO-*.jpg
 .claude/
 Thumbs.db
 desktop.ini
+/*.JPG
+/*.zip
