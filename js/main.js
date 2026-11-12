@@ -105,6 +105,11 @@
   });
   }
 
+  /* Header: transparant boven de video, effen na scrollen */
+  var header = document.querySelector('.header');
+  function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 40); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
   /* Fade-in bij scrollen */
   var items = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {

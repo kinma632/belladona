@@ -35,7 +35,7 @@
 </script>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="no-js">
+<body class="no-js has-hero">
 
 <!-- Herbruikbare SVG-symbolen -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -108,28 +108,26 @@
 
 <main id="main">
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO (video in zwart-wit) ============ -->
 <section class="hero" id="home">
-  <div class="container">
-    <div class="frame">
-      <div class="reveal">
-        <img class="hero-logo" src="img/logo.png" width="320" height="320" alt="Logo van Nails by Belladonna: gouden lijntekening van een vrouwengezicht met verzorgde nagels">
-        <h1><span class="h1-small">Nails by</span>Belladonna</h1>
-        <div class="rule" aria-hidden="true"></div>
-        <p class="sub">Verzorgde, elegante nagels in Culemborg</p>
-        <p class="lead">Ontspan en laat je verwennen. Professionele nagelverzorging met aandacht voor detail.</p>
-        <a class="btn btn--lg wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener">
-          <svg aria-hidden="true"><use href="#wa"/></svg>Maak een afspraak via WhatsApp
-        </a>
-        <p class="note">Alleen op afspraak · <a href="#afspraak">of vul het formulier in</a></p>
-      </div>
-      <div class="hero-visual reveal d2">
-        <div class="ring2" aria-hidden="true"></div>
-        <div class="ring" aria-hidden="true"></div>
-        <div class="circle"><img src="img/salon-overzicht.jpg" width="480" height="640" alt="De lichte salon van Nails by Belladonna met daklicht, nageltafel en kleurenwand" style="object-position:50% 45%"></div>
-      </div>
+  <!-- Video: zet het bestand in video/hero.mp4 en haal het commentaar rond <source> weg -->
+  <video class="hero-media" autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg" aria-hidden="true">
+    <!-- <source src="video/hero.mp4" type="video/mp4"> -->
+  </video>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-content container">
+    <p class="hero-kicker reveal">welkom bij</p>
+    <h1 class="reveal d1"><span class="h1-small">Nails by</span>Belladonna</h1>
+    <div class="rule reveal d1" aria-hidden="true"></div>
+    <p class="sub reveal d2">Verzorgde, elegante nagels in Culemborg</p>
+    <div class="hero-actions reveal d3">
+      <a class="btn btn--lg btn--light wa-link" href="https://wa.me/31615463503" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#wa"/></svg>Maak een afspraak
+      </a>
     </div>
+    <p class="note reveal d3">Alleen op afspraak</p>
   </div>
+  <a class="hero-scroll" href="#galerij" aria-label="Scroll naar beneden"></a>
 </section>
 
 
