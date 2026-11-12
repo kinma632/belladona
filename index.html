@@ -110,10 +110,11 @@
 
 <!-- ============ HERO (video in zwart-wit) ============ -->
 <section class="hero" id="home">
-  <!-- Video: zet het bestand in video/hero.mp4 en haal het commentaar rond <source> weg -->
-  <video class="hero-media" autoplay muted loop playsinline preload="metadata" poster="img/hero-poster.jpg" aria-hidden="true">
-    <!-- <source src="video/hero.mp4" type="video/mp4"> -->
-  </video>
+  <!-- Video's in zwart-wit (filter in CSS). Op mobiel alleen de behandeling, op groter scherm beide naast elkaar. -->
+  <div class="hero-media" aria-hidden="true">
+    <video class="hero-vid" autoplay muted loop playsinline preload="auto" poster="img/hero-poster-behandeling.jpg" src="video/salon-behandeling.mp4"></video>
+    <video class="hero-vid hero-vid--2" muted loop playsinline preload="none" poster="img/hero-poster-ingang.jpg" data-src="video/salon-ingang.mp4" data-end="25"></video>
+  </div>
   <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-content container">
     <p class="hero-kicker reveal">welkom bij</p>

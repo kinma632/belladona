@@ -105,6 +105,15 @@
   });
   }
 
+  /* Tweede hero-video alleen laden op grotere schermen; afspelen tot data-end en opnieuw beginnen */
+  var v2 = document.querySelector('.hero-vid--2');
+  if (v2 && window.matchMedia('(min-width:768px)').matches) {
+    var end = parseFloat(v2.dataset.end) || 0;
+    v2.src = v2.dataset.src; v2.preload = 'auto';
+    if (end) v2.addEventListener('timeupdate', function(){ if (v2.currentTime >= end) v2.currentTime = 0; });
+    var p = v2.play(); if (p && p.catch) p.catch(function(){});
+  }
+
   /* Header: transparant boven de video, effen na scrollen */
   var header = document.querySelector('.header');
   function onScroll(){ header.classList.toggle('scrolled', window.scrollY > 40); }
