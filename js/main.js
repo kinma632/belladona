@@ -105,13 +105,30 @@
   });
   }
 
-  /* Tweede hero-video alleen laden op grotere schermen; afspelen tot data-end en opnieuw beginnen */
-  var v2 = document.querySelector('.hero-vid--2');
-  if (v2 && window.matchMedia('(min-width:768px)').matches) {
-    var end = parseFloat(v2.dataset.end) || 0;
-    v2.src = v2.dataset.src; v2.preload = 'auto';
-    if (end) v2.addEventListener('timeupdate', function(){ if (v2.currentTime >= end) v2.currentTime = 0; });
-    var p = v2.play(); if (p && p.catch) p.catch(function(){});
+  /* Hero-video's na volgorde afspelen (met zachte overgang) en daarna opnieuw */
+  var vids = Array.prototype.slice.call(document.querySelectorAll('.hero-vid'));
+  if (vids.length > 1) {
+    var cur = 0, switching = false;
+    var load = function (v) { if (!v.getAttribute('src') && v.dataset.src) { v.src = v.dataset.src; v.preload = 'auto'; } };
+    var next = function () {
+      if (switching) return; switching = true;
+      var a = vids[cur]; cur = (cur + 1) % vids.length; var b = vids[cur];
+      load(b); b.currentTime = 0;
+      var p = b.play(); if (p && p.catch) p.catch(function(){});
+      b.classList.add('is-active'); a.classList.remove('is-active');
+      setTimeout(function(){ a.pause(); switching = false; }, 1300);
+      load(vids[(cur + 1) % vids.length]);
+    };
+    vids.forEach(function (v) {
+      v.loop = false;
+      v.addEventListener('ended', function(){ if (v.classList.contains('is-active')) next(); });
+      v.addEventListener('timeupdate', function(){
+        var end = parseFloat(v.dataset.end) || 0;
+        if (end && v.classList.contains('is-active') && v.currentTime >= end) next();
+      });
+    });
+    /* Volgende video pas laden als de eerste speelt, zodat de pagina snel opent */
+    vids[0].addEventListener('playing', function once(){ vids[0].removeEventListener('playing', once); load(vids[1]); });
   }
 
   /* Header: transparant boven de video, effen na scrollen */

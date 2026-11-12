@@ -93,7 +93,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="behandelingen.html">Behandelingen</a></li>
         <li><a href="behandelingen.html#galerij">Galerij</a></li>
-        <li><a href="#over-mij">Over mij</a></li>
+        <li><a href="behandelingen.html#over-mij">Over mij</a></li>
         <li><a href="behandelingen.html#salon">Salon</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="nav-cta"><a class="btn" href="#afspraak">Afspraak maken</a></li>
@@ -110,10 +110,10 @@
 
 <!-- ============ HERO (video in zwart-wit) ============ -->
 <section class="hero" id="home">
-  <!-- Video's in zwart-wit (filter in CSS). Op mobiel alleen de behandeling, op groter scherm beide naast elkaar. -->
+  <!-- Video's in zwart-wit (filter in CSS), na elkaar afgespeeld met een zachte overgang -->
   <div class="hero-media" aria-hidden="true">
-    <video class="hero-vid" autoplay muted loop playsinline preload="auto" poster="img/hero-poster-behandeling.jpg" src="video/salon-behandeling.mp4"></video>
-    <video class="hero-vid hero-vid--2" muted loop playsinline preload="none" poster="img/hero-poster-ingang.jpg" data-src="video/salon-ingang.mp4" data-end="25"></video>
+    <video class="hero-vid is-active" autoplay muted playsinline preload="auto" poster="img/hero-poster-behandeling.jpg" src="video/salon-behandeling.mp4"></video>
+    <video class="hero-vid" muted playsinline preload="none" poster="img/hero-poster-ingang.jpg" data-src="video/salon-ingang.mp4" data-end="25"></video>
   </div>
   <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-content container">
@@ -128,34 +128,12 @@
     </div>
     <p class="note reveal d3">Alleen op afspraak</p>
   </div>
-  <a class="hero-scroll" href="#over-mij" aria-label="Scroll naar beneden"></a>
+  <a class="hero-scroll" href="#hoe-werkt-het" aria-label="Scroll naar beneden"></a>
 </section>
 
-
-<!-- ============ OVER MIJ ============ -->
-<section id="over-mij">
-  <div class="container">
-    <div class="frame">
-      <div class="about">
-        <div class="portrait reveal">
-          <div class="circle"><img src="img/over-mij.jpg" width="480" height="640" loading="lazy" alt="De nagelstyliste van Nails by Belladonna, glimlachend in de wachthoek van de salon" style="object-position:55% 18%"></div>
-        </div>
-        <div class="text reveal d1">
-          <span class="eyebrow">Maak kennis</span>
-          <h2 style="font-size:clamp(2.6rem,7vw,3.6rem)">Over mij</h2>
-          <div class="divider" aria-hidden="true"><svg><use href="#sprig"/></svg></div>
-          <blockquote style="margin-top:24px">
-            Bij Nails by Belladonna staat jouw comfort centraal. Ik werk met kwaliteitsproducten en neem de tijd voor elke klant, zodat je met een glimlach en prachtige nagels naar huis gaat.
-          </blockquote>
-          <p class="sign">— Belladonna</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ HOE WERKT HET ============ -->
-<section id="hoe-werkt-het" class="alt">
+<section id="hoe-werkt-het">
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">In drie stappen</span>
@@ -186,7 +164,7 @@
 </section>
 
 <!-- ============ AFSPRAAK FORMULIER ============ -->
-<section id="afspraak">
+<section id="afspraak" class="alt">
   <div class="container">
     <div class="frame booking-frame">
       <div class="section-head reveal">
@@ -252,7 +230,7 @@
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section id="contact" class="alt">
+<section id="contact">
   <div class="container">
     <div class="frame">
       <div class="section-head reveal">
